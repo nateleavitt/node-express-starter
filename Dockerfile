@@ -1,5 +1,5 @@
-FROM node:14.4.0-alpine
-# ENV NODE_ENV=development
+FROM node:12.18.1-alpine
+ENV NODE_ENV=development
 
 RUN apk add --no-cache \
   tzdata \
