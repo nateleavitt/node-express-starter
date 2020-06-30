@@ -1,4 +1,4 @@
-FROM node:12.2.0-alpine
+FROM node:14.4.0-alpine
 # ENV NODE_ENV=development
 
 RUN apk add --no-cache \
