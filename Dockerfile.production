@@ -1,0 +1,16 @@
+FROM node:14.4.0-alpine
+ENV NODE_ENV=development
+
+RUN apk add --no-cache \
+  tzdata \
+  bash && mkdir /mnt/app
+
+WORKDIR /mnt/app
+COPY . /mnt/app
+
+RUN rm -rf node_modules && yarn install
+
+ENV NODE_ENV=production
+RUN yarn build
+
+EXPOSE 4000
